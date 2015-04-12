@@ -23,7 +23,6 @@
       &:hover,
       &:focus {
         text-decoration: none;
-        background-color: @nav-link-hover-bg;
       }
     }
 
@@ -74,20 +73,22 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  border-bottom: 1px solid @nav-tabs-border-color;
+  border-bottom: 2px solid @nav-tabs-active-link-hover-border-color;
   > li {
     float: left;
     // Make the list-items overlay the bottom border
-    margin-bottom: -1px;
+    margin-bottom: -2px;
 
     // Actual tabs (as links)
     > a {
       margin-right: 2px;
       line-height: @line-height-base;
-      border: 1px solid transparent;
+      color: @white-base;
+      background-color: @nav-tabs-active-link-hover-bg;
+      border: 2px solid @nav-tabs-active-link-hover-border-color;
+      border-bottom: 0;
       border-radius: @border-radius-base @border-radius-base 0 0;
       &:hover {
-        border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
       }
     }
 
@@ -98,8 +99,8 @@
       &:focus {
         color: @nav-tabs-active-link-hover-color;
         background-color: @nav-tabs-active-link-hover-bg;
-        border: 1px solid @nav-tabs-active-link-hover-border-color;
-        border-bottom-color: transparent;
+        border: 2px solid @nav-tabs-active-link-hover-border-color;
+        border-bottom: 0;
         cursor: default;
       }
     }
@@ -188,23 +189,20 @@
 //
 // Mixin for adding on top the shared `.nav-justified` styles for our tabs
 .nav-tabs-justified {
-  border-bottom: 0;
-
+  
   > li > a {
     // Override margin from .nav-tabs
-    margin-right: 0;
+    margin-right: 2px;
     border-radius: @border-radius-base;
   }
 
   > .active > a,
   > .active > a:hover,
   > .active > a:focus {
-    border: 1px solid @nav-tabs-justified-link-border-color;
   }
 
   @media (min-width: @screen-sm-min) {
     > li > a {
-      border-bottom: 1px solid @nav-tabs-justified-link-border-color;
       border-radius: @border-radius-base @border-radius-base 0 0;
     }
     > .active > a,

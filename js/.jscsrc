@@ -8,7 +8,6 @@
   "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
   "disallowSpaceBeforeBinaryOperators": [","],
   "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
-  "disallowSpacesInFunctionDeclaration": { "beforeOpeningRoundBrace": true },
   "disallowSpacesInNamedFunctionExpression": { "beforeOpeningRoundBrace": true },
   "disallowSpacesInsideArrayBrackets": true,
   "disallowSpacesInsideParentheses": true,

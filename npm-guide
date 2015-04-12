@@ -1,0 +1,20 @@
+npm
+npm install
+
+sudo gem install jekyll
+sudo gem install rouge
+
+jekyll serve
+
+
+
+#71BF44 - G
+#4D832E - G Dark
+
+#58585A - &
+#DA2128 - R
+
+#F4B900 - Warning Yellow
+
+ - Background
+
