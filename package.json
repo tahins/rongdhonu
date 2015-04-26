@@ -1,7 +1,7 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "3.3.4",
+  "name": "rongdhonu",
+  "description": "Yet another front-end framework for developing responsive, mobile first projects on the web.",
+  "version": "0.0.1",
   "keywords": [
     "css",
     "less",
@@ -11,24 +11,24 @@
     "framework",
     "web"
   ],
-  "homepage": "http://getbootstrap.com",
-  "author": "Twitter, Inc.",
+  "homepage": "http://rongdhonu.co",
+  "author": "G&R",
   "scripts": {
     "test": "grunt test"
   },
-  "style": "dist/css/bootstrap.css",
-  "less": "less/bootstrap.less",
+  "style": "dist/css/rongdhonu.css",
+  "less": "less/rongdhonu.less",
   "main": "./dist/js/npm",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/tahins/rongdhonu.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/tahins/rongdhonu/issues"
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/twbs/bootstrap/blob/master/LICENSE"
+    "url": "https://github.com/tahins/rongdhonu/blob/master/LICENSE"
   },
   "devDependencies": {
     "btoa": "~1.1.2",
@@ -75,7 +75,7 @@
     "LICENSE"
   ],
   "jspm": {
-    "main": "js/bootstrap",
+    "main": "js/rongdhonu",
     "shim": {
       "js/bootstrap": {
         "deps": "jquery",

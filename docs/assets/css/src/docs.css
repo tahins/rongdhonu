@@ -241,6 +241,9 @@ h4 code {
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
   background-color: #71bf44;
+  /*background: url("../../img/cityscape.png");*/
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
   background-image: -webkit-gradient(linear, left top, left bottom, from(#4d832e), to(#71bf44));
   background-image: -webkit-linear-gradient(top, #4d832e 0%, #71bf44 100%);
   background-image:      -o-linear-gradient(top, #4d832e 0%, #71bf44 100%);

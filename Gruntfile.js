@@ -158,7 +158,7 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= pkg.name %>.css.map',
           sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
-        src: 'less/bootstrap.less',
+        src: 'less/rongdhonu.less',
         dest: 'dist/css/<%= pkg.name %>.css'
       },
       compileTheme: {
@@ -171,7 +171,40 @@ module.exports = function (grunt) {
         },
         src: 'less/theme.less',
         dest: 'dist/css/<%= pkg.name %>-theme.css'
-      }
+      },
+        compileThemeGandr: {
+            options: {
+                strictMath: true,
+                sourceMap: true,
+                outputSourceFiles: true,
+                sourceMapURL: 'theme-gandr.css.map',
+                sourceMapFilename: 'dist/css/theme-gandr.css.map'
+            },
+            src: 'less/theme-gandr.less',
+            dest: 'dist/css/theme-gandr.css'
+        },
+        compileThemeTohobill: {
+            options: {
+                strictMath: true,
+                sourceMap: true,
+                outputSourceFiles: true,
+                sourceMapURL: 'theme-tohobill.css.map',
+                sourceMapFilename: 'dist/css/theme-tohobill.css.map'
+            },
+            src: 'less/theme-tohobill.less',
+            dest: 'dist/css/theme-tohobill.css'
+        },
+        compileThemeJossCall: {
+            options: {
+                strictMath: true,
+                sourceMap: true,
+                outputSourceFiles: true,
+                sourceMapURL: 'theme-josscall.css.map',
+                sourceMapFilename: 'dist/css/theme-josscall.css.map'
+            },
+            src: 'less/theme-josscall.less',
+            dest: 'dist/css/theme-josscall.css'
+        }
     },
 
     autoprefixer: {
@@ -190,6 +223,24 @@ module.exports = function (grunt) {
         },
         src: 'dist/css/<%= pkg.name %>-theme.css'
       },
+        themeGandr: {
+            options: {
+                map: true
+            },
+            src: 'dist/css/theme-gandr.css'
+        },
+        themeTohobill: {
+            options: {
+                map: true
+            },
+            src: 'dist/css/theme-tohobill.css'
+        },
+        themeJossCall: {
+            options: {
+                map: true
+            },
+            src: 'dist/css/theme-josscall.css'
+        },
       docs: {
         src: ['docs/assets/css/anchor.css', 'docs/assets/css/src/docs.css']
       },
@@ -237,6 +288,18 @@ module.exports = function (grunt) {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       },
+        minifyThemeGandr: {
+            src: 'dist/css/theme-gandr.css',
+            dest: 'dist/css/theme-gandr.min.css'
+        },
+        minifyThemeTohobill: {
+            src: 'dist/css/theme-tohobill.css',
+            dest: 'dist/css/theme-tohobill.min.css'
+        },
+        minifyThemeJossCall: {
+            src: 'dist/css/theme-josscall.css',
+            dest: 'dist/css/theme-josscall.min.css'
+        },
       docs: {
         src: [
           'docs/assets/css/src/pygments-manni.css',
@@ -454,8 +517,8 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'usebanner', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileThemeGandr', 'less:compileThemeTohobill', 'less:compileThemeJossCall']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'autoprefixer:themeGandr', 'autoprefixer:themeTohobill', 'autoprefixer:themeJossCall', 'usebanner', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'cssmin:minifyThemeGandr', 'cssmin:minifyThemeTohobill', 'cssmin:minifyThemeJossCall']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);

@@ -6,6 +6,10 @@ sudo gem install rouge
 
 jekyll serve
 
+grunt	watch
+		dist
+		docs
+
 
 
 #71BF44 - G
