@@ -53,6 +53,8 @@
 
 .collapse-admin-sidebar {
   position: absolute;
+  width: 35px;
+  height: 41px;
   top: 0;
   right: -35px;
   z-index: 1;
@@ -95,9 +97,6 @@
 
     > li {
       position: relative;
-      width: @dashboard-primary-sidebar-width;
-      height: @dashboard-primary-sidebar-width;
-      border-bottom: 1px solid @gray-dark;
 
       > label {
         position: absolute;
@@ -117,6 +116,7 @@
         .flexbox();
         width: @dashboard-primary-sidebar-width;
         height: @dashboard-primary-sidebar-width;
+        border-bottom: 1px solid @gray-dark;
 
         > span {
           .flex-center();

@@ -232,19 +232,21 @@
 .navbar-nav {
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
-  >li.circle-item {
-    margin-left: 10px;
-
-    @media (min-width: @grid-float-breakpoint) {
-      border-radius: 50%;
-      width: 40px;
-    }
+  >li {
 
     >a {
-      color: white !important;
 
       @media (min-width: @grid-float-breakpoint) {
-        color: white !important;
+
+      }
+
+      &.circle-item {
+        margin-left: 10px;
+
+        @media (min-width: @grid-float-breakpoint) {
+          border-radius: 50% !important;
+          width: 40px;
+        }
       }
     }
   }
@@ -255,6 +257,12 @@
     padding-top:    10px;
     padding-bottom: 10px;
     line-height: @line-height-computed;
+
+    -webkit-transition: background-color .3s ease-in-out;
+    -o-transition: background-color .3s ease-in-out;
+    -moz-transition: background-color .3s ease-in-out;
+    -ms-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
   }
 
   @media (max-width: @grid-float-breakpoint-max) {

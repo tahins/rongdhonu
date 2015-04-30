@@ -122,11 +122,11 @@
 }
 
 .secondary-admin-sidebar label {
-    display: block;
-    padding: 10px 0;
-    font-weight: bold;
-    border-bottom: 2px solid #9dbd7b;
-    margin: 0 10px;
+  display: block;
+  padding: 10px 0;
+  margin: 0 10px;
+  font-weight: bold;
+  border-bottom: 2px solid #9dbd7b;
 }
 
 .primary-admin-sidebar ul,
@@ -160,8 +160,7 @@
   border-top: 1px solid #3e3e3e;
 }
 
-.primary-admin-sidebar ul li.active {
-}
+
 
 .admin-sidebar {
   position: fixed;
