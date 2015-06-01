@@ -65,6 +65,9 @@ module.exports = function (grunt) {
         },
         src: ['Gruntfile.js', 'grunt/*.js']
       },
+      src: {
+        src: 'js/*.js'
+      },
       core: {
         src: 'js/*.js'
       },
@@ -118,7 +121,11 @@ module.exports = function (grunt) {
           'js/popover.js',
           'js/scrollspy.js',
           'js/tab.js',
-          'js/affix.js'
+          'js/affix.js',
+          'js/others/utility.js',
+          'js/others/jquery.dataTables.min.js',
+          'js/others/dataTables.bootstrap.js',
+          'js/others/highmaps.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }

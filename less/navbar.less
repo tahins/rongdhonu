@@ -241,7 +241,7 @@
       }
 
       &.circle-item {
-        margin-left: 10px;
+        margin-left: 15px;
 
         @media (min-width: @grid-float-breakpoint) {
           border-radius: 50% !important;
@@ -524,7 +524,15 @@
       color: @navbar-default-link-color;
       border-radius: @navbar-border-radius;
 
+      &.right-arrow-next {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
       &.right-arrow {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
         &:before {
           content: "";
           position: absolute;
@@ -541,7 +549,15 @@
         .navbar-btn();
       }
 
+      &.left-arrow-next {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      
       &.left-arrow {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
         &:before {
           content: "";
           position: absolute;

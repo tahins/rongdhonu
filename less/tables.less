@@ -93,7 +93,7 @@ th {
     > tr {
       > th,
       > td {
-        border: 1px solid @table-border-color;
+        border: 2px solid @table-border-color;
       }
     }
   }
@@ -101,6 +101,36 @@ th {
     > th,
     > td {
       border-bottom-width: 2px;
+    }
+  }
+
+  &.table-striped {
+    /*border: 0;*/
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th {
+          border: 0;
+          border-right: 2px solid @table-border-head-color;
+          &:last-child {
+            border-right-width: 0;
+          }
+        }
+        > td {
+          border: 0;
+          border-right: 2px solid @table-border-color;
+          &:last-child {
+            border-right-width: 0;
+          }
+        }
+      }
+    }
+    > thead > tr {
+      > th,
+      > td {
+        border-bottom-width: 2px;
+      }
     }
   }
 }
@@ -111,6 +141,10 @@ th {
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 .table-striped {
+  > thead > tr {
+    background-color: @table-bg-head;
+  }
+
   > tbody > tr:nth-of-type(odd) {
     background-color: @table-bg-accent;
   }
